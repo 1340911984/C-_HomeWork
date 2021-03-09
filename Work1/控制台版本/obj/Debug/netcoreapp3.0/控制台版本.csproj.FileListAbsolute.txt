@@ -1,0 +1,11 @@
+C:\Users\86139\source\repos\控制台版本\bin\Debug\netcoreapp3.0\控制台版本.exe
+C:\Users\86139\source\repos\控制台版本\bin\Debug\netcoreapp3.0\控制台版本.deps.json
+C:\Users\86139\source\repos\控制台版本\bin\Debug\netcoreapp3.0\控制台版本.runtimeconfig.json
+C:\Users\86139\source\repos\控制台版本\bin\Debug\netcoreapp3.0\控制台版本.runtimeconfig.dev.json
+C:\Users\86139\source\repos\控制台版本\bin\Debug\netcoreapp3.0\控制台版本.dll
+C:\Users\86139\source\repos\控制台版本\bin\Debug\netcoreapp3.0\控制台版本.pdb
+C:\Users\86139\source\repos\控制台版本\obj\Debug\netcoreapp3.0\控制台版本.csprojAssemblyReference.cache
+C:\Users\86139\source\repos\控制台版本\obj\Debug\netcoreapp3.0\控制台版本.AssemblyInfoInputs.cache
+C:\Users\86139\source\repos\控制台版本\obj\Debug\netcoreapp3.0\控制台版本.AssemblyInfo.cs
+C:\Users\86139\source\repos\控制台版本\obj\Debug\netcoreapp3.0\控制台版本.dll
+C:\Users\86139\source\repos\控制台版本\obj\Debug\netcoreapp3.0\控制台版本.pdb

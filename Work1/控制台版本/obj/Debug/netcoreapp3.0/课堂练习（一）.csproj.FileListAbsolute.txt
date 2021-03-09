@@ -1,0 +1,11 @@
+C:\Users\86139\source\repos\课堂练习（一）\bin\Debug\netcoreapp3.0\课堂练习（一）.exe
+C:\Users\86139\source\repos\课堂练习（一）\bin\Debug\netcoreapp3.0\课堂练习（一）.deps.json
+C:\Users\86139\source\repos\课堂练习（一）\bin\Debug\netcoreapp3.0\课堂练习（一）.runtimeconfig.json
+C:\Users\86139\source\repos\课堂练习（一）\bin\Debug\netcoreapp3.0\课堂练习（一）.runtimeconfig.dev.json
+C:\Users\86139\source\repos\课堂练习（一）\bin\Debug\netcoreapp3.0\课堂练习（一）.dll
+C:\Users\86139\source\repos\课堂练习（一）\bin\Debug\netcoreapp3.0\课堂练习（一）.pdb
+C:\Users\86139\source\repos\课堂练习（一）\obj\Debug\netcoreapp3.0\课堂练习（一）.csprojAssemblyReference.cache
+C:\Users\86139\source\repos\课堂练习（一）\obj\Debug\netcoreapp3.0\课堂练习（一）.AssemblyInfoInputs.cache
+C:\Users\86139\source\repos\课堂练习（一）\obj\Debug\netcoreapp3.0\课堂练习（一）.AssemblyInfo.cs
+C:\Users\86139\source\repos\课堂练习（一）\obj\Debug\netcoreapp3.0\课堂练习（一）.dll
+C:\Users\86139\source\repos\课堂练习（一）\obj\Debug\netcoreapp3.0\课堂练习（一）.pdb
