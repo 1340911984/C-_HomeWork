@@ -1,0 +1,10 @@
+C:\Users\86139\source\repos\NumThree\bin\Debug\netcoreapp3.0\Num3.exe
+C:\Users\86139\source\repos\NumThree\bin\Debug\netcoreapp3.0\Num3.deps.json
+C:\Users\86139\source\repos\NumThree\bin\Debug\netcoreapp3.0\Num3.runtimeconfig.json
+C:\Users\86139\source\repos\NumThree\bin\Debug\netcoreapp3.0\Num3.runtimeconfig.dev.json
+C:\Users\86139\source\repos\NumThree\bin\Debug\netcoreapp3.0\Num3.dll
+C:\Users\86139\source\repos\NumThree\bin\Debug\netcoreapp3.0\Num3.pdb
+C:\Users\86139\source\repos\NumThree\obj\Debug\netcoreapp3.0\Num3.AssemblyInfoInputs.cache
+C:\Users\86139\source\repos\NumThree\obj\Debug\netcoreapp3.0\Num3.AssemblyInfo.cs
+C:\Users\86139\source\repos\NumThree\obj\Debug\netcoreapp3.0\Num3.dll
+C:\Users\86139\source\repos\NumThree\obj\Debug\netcoreapp3.0\Num3.pdb
