@@ -8,3 +8,4 @@ C:\Users\86139\source\repos\NumOne\obj\Debug\netcoreapp3.0\Num1.AssemblyInfoInpu
 C:\Users\86139\source\repos\NumOne\obj\Debug\netcoreapp3.0\Num1.AssemblyInfo.cs
 C:\Users\86139\source\repos\NumOne\obj\Debug\netcoreapp3.0\Num1.dll
 C:\Users\86139\source\repos\NumOne\obj\Debug\netcoreapp3.0\Num1.pdb
+C:\Users\86139\source\repos\NumOne\obj\Debug\netcoreapp3.0\Num1.csprojAssemblyReference.cache

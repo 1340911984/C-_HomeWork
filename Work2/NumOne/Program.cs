@@ -31,7 +31,7 @@ namespace NumOne
             try
             {
                 String output1 = GetPrime(int.Parse(input1));
-                Console.WriteLine($"{input1}的素数因子是1,{output1}\n\n");
+                Console.WriteLine($"{input1}的素数因子是{output1}\n\n");
             }
             catch
             {
