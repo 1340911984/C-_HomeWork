@@ -106,9 +106,9 @@ class Work3_2 {
                 }
                 sum += shape.getArea();
             }catch(NotShapeException e){
-                Console.WriteLine("******************************************************");
+                Console.WriteLine("MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM");
                 Console.WriteLine("Exception caught: {0}", e);
-                Console.WriteLine("******************************************************");
+                Console.WriteLine("WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW");
             }
         }
         Console.WriteLine(sum);          
