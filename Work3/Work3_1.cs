@@ -1,51 +1,61 @@
-class Shape{
-    protected double Length;
-    protected double Width;
-    protected double High;
-    public Shape(){}
-    public void setLength(double len){
+abstract class Shape{//抽象
+    abstract public bool isShape();
+    abstract public double getArea();
+}
+class Rect : Shape{
+   double len;
+   double width;
+   public double Length{
+        get{return len;}
+        set{ len = value;}
+     }
+   public double Width{
+        get{return width;}
+        set{ width = value;}
+   }
+    public Rect(double len, double width){
         this.Length = len;
-    }
-    public void setWidth(double width){
         this.Width = width;
     }
-    public void setHigh(double high){
-        this.High = high;
-    }
-}
-interface ShapeWork{
-    bool isShape();
-    double getArea();
-}
-class Rect : Shape,ShapeWork{
-    public Rect(double len, double width){
-        this.setLength(len);
-        this.setWidth(width);
-    }
-    public bool isShape(){
+    override public bool isShape(){
         return(Length*Width>0);
     }
-    public double getArea(){
+    override public double getArea(){
         if(this.isShape() == false){
             return -1;
         }
         return Length*Width;
     }
 }
-class Tria : Shape,ShapeWork{
+class Tria : Shape{
+   double len;
+   double width;
+   double high;
+   public double Length{
+        get{return len;}
+        set{ len = value;}
+     }
+   public double Width{
+        get{return width;}
+        set{ width = value;}
+   }
+   public double High{
+        get{return high;}
+        set{ high = value;}
+   }
     public Tria(double Len, double Width,double High){
-        this.setLength(Len);
-        this.setWidth(Width);
-        this.setHigh(High);
+        this.Length=(Len);
+        this.Width=(Width);
+        this.High=(High);
     }
-    public bool isShape(){
+    override public bool isShape(){
         return((Length*Width*High>0)&&
-              (Length - Width -High)*
-              (Width - Length -High)*
-              (High - Width -Length)<0
+              (Length + Width -High)>0&&
+              (Width + Length -High)>0&&
+              (High + Width -Length)>0
               );
     }
-    public double getArea(){
+    override public double getArea(){
         if(this.isShape() == false){
             return -1;
         }
