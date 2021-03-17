@@ -1,22 +1,15 @@
 class ShapeFactory{//lsp
-    public Shape getShape(int Type,params double[]list){    
+    public Shape getShape(int Type,params double[]list){ 
+        Shape shape = null;
         if(Type == 1){
-            Shape Rect = new Rect(list[0],list[1]);
-            if(Rect.isShape()){
-                return Rect;
-            }else{
-                throw (new NotShapeException("Not a Rect"));
-            }
-            return null;
+            shape = new Rect(list[0],list[1]);
         } else{
-            Shape Tria = new Tria(list[0],list[1],list[2]);
-            if(Tria.isShape()){
-                return Tria;
-            }else{
-                throw (new NotShapeException("Not a Tria"));
-            }
-            return null;
+            shape = new Tria(list[0],list[1],list[2]);
         }
+        if(shape.isShape()==false){
+            throw (new NotShapeException("Not a Shape"));
+        }
+        return shape;
     }
 }
 public class NotShapeException: ApplicationException
@@ -76,7 +69,7 @@ class Tria : Shape{
     override public bool isShape(){
         return((Length*Width*High>0)&&
               (Length + Width -High)>0&&
-              (Width + Length -High)>0&&
+              (Length + High -Width)>0&&
               (High + Width -Length)>0
               );
     }
@@ -113,11 +106,15 @@ class Work3_2 {
                 }
                 sum += shape.getArea();
             }catch(NotShapeException e){
+                Console.WriteLine(“******************************************************”);
                 Console.WriteLine("Exception caught: {0}", e);
+                Console.WriteLine(“******************************************************”);
             }
         }
         Console.WriteLine(sum);          
     }
 }
+
+
 
 
