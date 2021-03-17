@@ -1,11 +1,29 @@
 class ShapeFactory{//lsp
-    public Shape getShape(int Type，params int[]list){    
+    public Shape getShape(int Type,params double[]list){    
         if(Type == 1){
-            return new Rect(list[0],list[1]);
+            Shape Rect = new Rect(list[0],list[1]);
+            if(Rect.isShape()){
+                return Rect;
+            }else{
+                throw (new NotShapeException("Not a Rect"));
+            }
+            return null;
         } else{
-            return new Tria(list[0],list[1],list[2]);
+            Shape Tria = new Tria(list[0],list[1],list[2]);
+            if(Tria.isShape()){
+                return Tria;
+            }else{
+                throw (new NotShapeException("Not a Tria"));
+            }
+            return null;
         }
     }
+}
+public class NotShapeException: ApplicationException
+{
+   public NotShapeException(string message): base(message)
+   {
+   }
 }
 abstract class Shape{//抽象
     abstract public bool isShape();
@@ -86,25 +104,22 @@ class Work3_2 {
             double Len=ran.Next(-10,100);
             double Width=ran.Next(-5,100);
             double High=ran.Next(0,100);
-            Shape shape = shapeFactory.getShape(Type,Len,Width,High);
-            if(Type == 0){
-                Console.Write("type is tria");
-                Console.WriteLine($" + Length={Len} + Width={Width} + High={High}");
-            }else{
-                Console.Write("type is rect");
-                Console.WriteLine($" + Length={Len} + Width={Width}");
-            }
-            if(shape.getArea()==0){
-                Console.WriteLine($"Worong data");
-                Console.WriteLine();
-                continue;
-            }else{
-                Console.WriteLine($"Area is {shape.getArea()}");
-                Console.WriteLine();
+            try{
+                Shape shape = shapeFactory.getShape(Type,Len,Width,High);
+                if(Type == 0){
+                    Console.Write("type is tria");
+                    Console.WriteLine($" + Length={Len} + Width={Width} + High={High}");
+                }else{
+                    Console.Write("type is rect");
+                    Console.WriteLine($" + Length={Len} + Width={Width}");
+                }
                 sum += shape.getArea();
+            }catch(NotShapeException e){
+                Console.WriteLine("Exception caught: {0}", e);
             }
         }
         Console.WriteLine(sum);          
     }
 }
+
 
