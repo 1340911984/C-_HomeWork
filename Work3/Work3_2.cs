@@ -1,62 +1,72 @@
-class ShapeFactory{
-    protected double Length;
-    protected double Width;
-    protected double High;
-    public void setLength(double len){
-        this.Length = len;
-    }
-    public void setWidth(double width){
-        this.Width = width;
-    }
-    public void setHigh(double high){
-        this.High = high;
-    }
-    public ShapeFactory getShape(int Type,double Len, double Width,double High){    
+class ShapeFactory{//lsp
+    public Shape getShape(int Type，params int[]list){    
         if(Type == 1){
-            return new Rect(Len,Width);
+            return new Rect(list[0],list[1]);
         } else{
-            return new Tria(Len,Width,High);
+            return new Tria(list[0],list[1],list[2]);
         }
     }
-    virtual public double getArea(){
-        return 0;
-    }
 }
-interface ShapeWork{
-    bool isShape();
+abstract class Shape{//抽象
+    abstract public bool isShape();
+    abstract public double getArea();
 }
-
-class Rect : ShapeFactory,ShapeWork{
+class Rect : Shape{
+   double len;
+   double width;
+   public double Length{
+        get{return len;}
+        set{ len = value;}
+     }
+   public double Width{
+        get{return width;}
+        set{ width = value;}
+   }
     public Rect(double len, double width){
-        this.setLength(len);
-        this.setWidth(width);
+        this.Length = len;
+        this.Width = width;
     }
-    public bool isShape(){
+    override public bool isShape(){
         return(Length*Width>0);
     }
     override public double getArea(){
         if(this.isShape() == false){
-            return 0;
+            return -1;
         }
         return Length*Width;
     }
 }
-class Tria : ShapeFactory,ShapeWork{
+class Tria : Shape{
+   double len;
+   double width;
+   double high;
+   public double Length{
+        get{return len;}
+        set{ len = value;}
+     }
+   public double Width{
+        get{return width;}
+        set{ width = value;}
+   }
+   public double High{
+        get{return high;}
+        set{ high = value;}
+   }
     public Tria(double Len, double Width,double High){
-        this.setLength(Len);
-        this.setWidth(Width);
-        this.setHigh(High);
+        this.Length=(Len);
+        this.Width=(Width);
+        this.High=(High);
     }
-    public bool isShape(){
+    override public bool isShape(){
         return((Length*Width*High>0)&&
-              (Length - Width -High)*
-              (Width - Length -High)*
-              (High - Width -Length)<0
+              (Length + Width -High)>0&&
+              (Width + Length -High)>0&&
+              (High + Width -Length)>0
               );
     }
     override public double getArea(){
         if(this.isShape() == false){
-            return 0;
+            return -1;
         }
         double temp;
         temp = (Length + Width + High) / 2;
@@ -76,7 +86,7 @@ class Work3_2 {
             double Len=ran.Next(-10,100);
             double Width=ran.Next(-5,100);
             double High=ran.Next(0,100);
-            ShapeFactory shape = shapeFactory.getShape(Type,Len,Width,High);
+            Shape shape = shapeFactory.getShape(Type,Len,Width,High);
             if(Type == 0){
                 Console.Write("type is tria");
                 Console.WriteLine($" + Length={Len} + Width={Width} + High={High}");
@@ -97,3 +107,4 @@ class Work3_2 {
         Console.WriteLine(sum);          
     }
 }
+
