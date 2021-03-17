@@ -21,9 +21,7 @@ class ShapeFactory{//lsp
 }
 public class NotShapeException: ApplicationException
 {
-   public NotShapeException(string message): base(message)
-   {
-   }
+   public NotShapeException(string message): base(message){}
 }
 abstract class Shape{//抽象
     abstract public bool isShape();
