@@ -90,11 +90,12 @@ class Work3_2 {
         Random ran=new Random();
         double sum = 0;
         ShapeFactory shapeFactory = new ShapeFactory();
+        //Factory的长宽高一开始就应该固定
+        double Len=ran.Next(0,100);
+        double Width=ran.Next(0,100);
+        double High=ran.Next(0,100);
         for(int i = 0 ; i<10 ; i++){
             int Type=ran.Next(0,2);//0是三角，1是正方形
-            double Len=ran.Next(-10,100);
-            double Width=ran.Next(-5,100);
-            double High=ran.Next(0,100);
             try{
                 Shape shape = shapeFactory.getShape(Type,Len,Width,High);
                 if(Type == 0){
@@ -109,6 +110,8 @@ class Work3_2 {
                 Console.WriteLine("MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM");
                 Console.WriteLine("Exception caught: {0}", e);
                 Console.WriteLine("WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW");
+                //由于我们只有可能三角形出错，所以在MAIN里面相当于我是一个工人发现了三角形每次都制造失败，我就重新定义高度！
+                double High=ran.Next(0,100);
             }
         }
         Console.WriteLine(sum);          
