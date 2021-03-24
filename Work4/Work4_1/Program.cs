@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace Work4{
     class Program{
@@ -38,11 +38,15 @@ namespace Work4{
             }
             public void ForEach(Action<T> action){
                 Node<T> node = head;
-                while(node != null)
-                {
-                    T data = node.Data;
-                    action(data);
-                    node = node.Next;
+                try{
+                    while (node != null){
+                        T data = node.Data;
+                        action(data);
+                        node = node.Next;
+                    }
+                }//防止空指针
+                catch (Exception e){
+                    Console.WriteLine("ForEach函数出错" + e.Message);
                 }
             }
         }
@@ -53,6 +57,7 @@ namespace Work4{
             names.Add("Alfred");
             names.Add("Tim");
             names.Add("Richard");
+            string sums = "";
 
             GenericList<int> nums = new GenericList<int>();
             nums.Add(32);
@@ -67,16 +72,26 @@ namespace Work4{
             try
             {
                 names.ForEach(s => { Console.WriteLine(s); });
+                names.ForEach(i => { sums += i; });
+                Console.Write("String求和：");
+                Console.WriteLine(sums);
+
+                Console.Write("\n");
+
+                nums.ForEach(s => { Console.WriteLine(s); });
                 nums.ForEach (i => { sum += i; });
                 nums.ForEach (i => { if (i >  max) max = i; });
                 nums.ForEach (i => { if (i <= min) min = i; });
+                Console.Write("Int求和：");
+                Console.WriteLine(sum);
+                Console.Write("Int最大：");
+                Console.WriteLine(max);
+                Console.Write("Int最小：");
+                Console.WriteLine(min);
+            }//防止有错误指针
+            catch (Exception e){
+                Console.WriteLine("Main函数出错"+e.Message);
             }
-            catch(Exception e){
-                Console.WriteLine(e.Message);
-            }
-            Console.WriteLine(sum);
-            Console.WriteLine(max);
-            Console.WriteLine(min);
         }
     }
 }
