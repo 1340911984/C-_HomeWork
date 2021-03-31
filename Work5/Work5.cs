@@ -187,13 +187,10 @@ namespace OrderControl
         {
             try
             {
-                foreach (Order i in list)
+                list.ForEach(Target =>
                 {
-                    if (i.Onum == num)
-                    {
-                        list.Remove(i);
-                    }
-                }
+                    if (Target.Onum==num) list.Remove(Target);
+                });
             }
             catch (Exception e)
             {
@@ -252,7 +249,7 @@ namespace OrderControl
                         Console.WriteLine("    按1 进入修改商品价格");
                         Console.WriteLine("    按2 进入修改商品名称");
                         Console.WriteLine("    按3 进入修改客户名字");
-                        Console.WriteLine("    按4 自动排序所有数据");
+                        Console.WriteLine("    按4 进入查询数据页面");
                         Console.WriteLine("    按5 进入选择删除界面");
                         Console.WriteLine("    其他数字显示所有数据");
                         Console.WriteLine("   全程输入非数字都会退出");
@@ -285,8 +282,9 @@ namespace OrderControl
                                 Console.WriteLine("已完成");
                                 break;
                             case 4:
-                                OrderService.PrintOnum();
-                                OrderService.OrderBy();
+                                Console.Write("请输入查询的订单号：");
+                                num = int.Parse(Console.ReadLine());
+                                OrderService.Select(num);
                                 Console.WriteLine("已完成");
                                 break;
                             case 5:
@@ -294,6 +292,11 @@ namespace OrderControl
                                 Console.Write("请输入删除的订单号：");
                                 num = int.Parse(Console.ReadLine());
                                 OrderService.Delete(num);
+                                Console.WriteLine("已完成");
+                                break;
+                            case 6:
+                                Console.Write("请输入查询的客户名：");
+                                OrderService.Select(Console.ReadLine());
                                 Console.WriteLine("已完成");
                                 break;
                             default:
