@@ -6,6 +6,12 @@ using System.Linq;
 
 namespace OrderControl
 {
+    class MyException : Exception
+    {
+        public MyException(string message) : base(message)
+        {
+        }
+    }
     class Order
     {
         public int Onum { get; set; }
@@ -102,7 +108,7 @@ namespace OrderControl
     class OrderService
     {
         static List<Order> list = new List<Order>();
-        static public void add(int num, int money, string name, string buyer)
+        static public void Add(int num, int money, string name, string buyer)
         {
             OrderDetails detail = new OrderDetails();
             detail.Oname = name;
@@ -115,18 +121,18 @@ namespace OrderControl
             {
                 if (order.Equals(i))
                 {
-                    Console.WriteLine("Order  repeat");
+                    throw new MyException("Order  repeat");
                     return;
                 }
                 if (i.detail.Equals(order.detail))
                 {
-                    Console.WriteLine("Detail repeat");
+                    throw new MyException("Detail  repeat");
                     return;
                 }
             }
             list.Add(order);
         }
-        static public void modify(int num, int i)
+        static public void Modify(int num, int i)
         {
             Order res = null;
             foreach (Order ans in list)
@@ -177,7 +183,7 @@ namespace OrderControl
                 }
             }
         }
-        static public void delete(int num)
+        static public void Delete(int num)
         {
             try
             {
@@ -194,20 +200,21 @@ namespace OrderControl
                 Console.WriteLine(e.Message);
             }
         }
-        static public void OrderBy()
+        static public List<Order> Select(int num)
         {
-            try
-            {
-                var query = from order in list
-                            where order.Onum != 0
-                            orderby order.Onum descending
-                            select order;  // 按ID降序
-                list = query.ToList<Order>();
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
+            var query = from order in list
+                        where order.Onum == num
+                        orderby order.Onum descending
+                        select order;  // 按ID降序
+            return query.ToList<Order>();
+        }
+        static public List<Order> Select(string name)
+        {
+            var query = from order in list
+                        where order.detail.Obuyer == name
+                        orderby order.detail.Obuyer descending
+                        select order;  // 按名字降序
+            return query.ToList<Order>();
         }
         static public void Print()
         {
@@ -230,12 +237,12 @@ namespace OrderControl
         {
             public void show()
             {
-                OrderService.add(1123, 28, "香蕉", "小吴");
-                OrderService.add(1123, 28, "苹果", "大物");//重复
-                OrderService.add(8888, 22, "苹果", "高数");
-                OrderService.add(6666, 28, "香蕉", "小吴");//重复
-                OrderService.add(1243, 12, "榴莲", "肥沃");
-                OrderService.add(5623, 66, "大炮", "瘦高");
+                OrderService.Add(1123, 28, "香蕉", "小吴");
+                OrderService.Add(1123, 28, "苹果", "大物");//重复
+                OrderService.Add(8888, 22, "苹果", "高数");
+                OrderService.Add(6666, 28, "香蕉", "小吴");//重复
+                OrderService.Add(1243, 12, "榴莲", "肥沃");
+                OrderService.Add(5623, 66, "大炮", "瘦高");
                 try
                 {
                     while (true)
@@ -248,7 +255,7 @@ namespace OrderControl
                         Console.WriteLine("    按4 自动排序所有数据");
                         Console.WriteLine("    按5 进入选择删除界面");
                         Console.WriteLine("    其他数字显示所有数据");
-                        Console.WriteLine("    全程输入非数字退出");
+                        Console.WriteLine("   全程输入非数字都会退出");
                         Console.WriteLine("*******************************");
 
                         Console.Write("请输入：");
@@ -260,21 +267,21 @@ namespace OrderControl
                                 OrderService.PrintOnum();
                                 Console.Write("请输入修改的订单号：");
                                 int num = int.Parse(Console.ReadLine());
-                                OrderService.modify(num, type);
+                                OrderService.Modify(num, type);
                                 Console.WriteLine("已完成");
                                 break;
                             case 2:
                                 OrderService.PrintOnum();
                                 Console.Write("请输入修改的订单号：");
                                 num = int.Parse(Console.ReadLine());
-                                OrderService.modify(num, type);
+                                OrderService.Modify(num, type);
                                 Console.WriteLine("已完成");
                                 break;
                             case 3:
                                 OrderService.PrintOnum();
                                 Console.Write("请输入修改的订单号：");
                                 num = int.Parse(Console.ReadLine());
-                                OrderService.modify(num, type);
+                                OrderService.Modify(num, type);
                                 Console.WriteLine("已完成");
                                 break;
                             case 4:
@@ -286,7 +293,7 @@ namespace OrderControl
                                 OrderService.PrintOnum();
                                 Console.Write("请输入删除的订单号：");
                                 num = int.Parse(Console.ReadLine());
-                                OrderService.delete(num);
+                                OrderService.Delete(num);
                                 Console.WriteLine("已完成");
                                 break;
                             default:
