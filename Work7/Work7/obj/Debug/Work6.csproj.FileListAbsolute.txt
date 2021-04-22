@@ -1,0 +1,9 @@
+C:\Users\86139\source\repos\Work6\bin\Debug\Work6.exe.config
+C:\Users\86139\source\repos\Work6\bin\Debug\Work6.exe
+C:\Users\86139\source\repos\Work6\bin\Debug\Work6.pdb
+C:\Users\86139\source\repos\Work6\obj\Debug\Work6.csprojAssemblyReference.cache
+C:\Users\86139\source\repos\Work6\obj\Debug\Work6.Form1.resources
+C:\Users\86139\source\repos\Work6\obj\Debug\Work6.Properties.Resources.resources
+C:\Users\86139\source\repos\Work6\obj\Debug\Work6.csproj.GenerateResource.cache
+C:\Users\86139\source\repos\Work6\obj\Debug\Work6.exe
+C:\Users\86139\source\repos\Work6\obj\Debug\Work6.pdb
