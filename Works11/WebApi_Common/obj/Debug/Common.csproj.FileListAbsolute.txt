@@ -1,0 +1,5 @@
+D:\work\net\web\WebApi\WebApi_Common\bin\Debug\WebApi_Common.dll
+D:\work\net\web\WebApi\WebApi_Common\bin\Debug\WebApi_Common.pdb
+D:\work\net\web\WebApi\WebApi_Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+D:\work\net\web\WebApi\WebApi_Common\obj\Debug\WebApi_Common.dll
+D:\work\net\web\WebApi\WebApi_Common\obj\Debug\WebApi_Common.pdb
