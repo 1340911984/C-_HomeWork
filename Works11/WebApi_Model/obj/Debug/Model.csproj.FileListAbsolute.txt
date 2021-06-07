@@ -1,0 +1,10 @@
+D:\work\net\web\WebApi\WebApi_Model\bin\Debug\WebApi_Model.dll
+D:\work\net\web\WebApi\WebApi_Model\bin\Debug\WebApi_Model.pdb
+D:\work\net\web\WebApi\WebApi_Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+D:\work\net\web\WebApi\WebApi_Model\obj\Debug\WebApi_Model.dll
+D:\work\net\web\WebApi\WebApi_Model\obj\Debug\WebApi_Model.pdb
+C:\Users\86139\Desktop\大二下课程内容\C-_HomeWork-main\Works11\WebApi_Model\bin\Debug\WebApi_Model.dll
+C:\Users\86139\Desktop\大二下课程内容\C-_HomeWork-main\Works11\WebApi_Model\bin\Debug\WebApi_Model.pdb
+C:\Users\86139\Desktop\大二下课程内容\C-_HomeWork-main\Works11\WebApi_Model\obj\Debug\Model.csprojAssemblyReference.cache
+C:\Users\86139\Desktop\大二下课程内容\C-_HomeWork-main\Works11\WebApi_Model\obj\Debug\WebApi_Model.dll
+C:\Users\86139\Desktop\大二下课程内容\C-_HomeWork-main\Works11\WebApi_Model\obj\Debug\WebApi_Model.pdb

@@ -1,0 +1,13 @@
+D:\work\net\web\WebApi\WebApi_BLL\obj\Debug\BLL.csprojAssemblyReference.cache
+D:\work\net\web\WebApi\WebApi_BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\work\net\web\WebApi\WebApi_BLL\bin\Debug\WebApi_BLL.dll
+D:\work\net\web\WebApi\WebApi_BLL\bin\Debug\WebApi_BLL.pdb
+D:\work\net\web\WebApi\WebApi_BLL\bin\Debug\WebApi_DAL.dll
+D:\work\net\web\WebApi\WebApi_BLL\bin\Debug\WebApi_Model.dll
+D:\work\net\web\WebApi\WebApi_BLL\bin\Debug\WebApi_DBUtility.dll
+D:\work\net\web\WebApi\WebApi_BLL\bin\Debug\WebApi_DAL.pdb
+D:\work\net\web\WebApi\WebApi_BLL\bin\Debug\WebApi_Model.pdb
+D:\work\net\web\WebApi\WebApi_BLL\bin\Debug\WebApi_DBUtility.pdb
+D:\work\net\web\WebApi\WebApi_BLL\obj\Debug\BLL.csproj.CopyComplete
+D:\work\net\web\WebApi\WebApi_BLL\obj\Debug\WebApi_BLL.dll
+D:\work\net\web\WebApi\WebApi_BLL\obj\Debug\WebApi_BLL.pdb
