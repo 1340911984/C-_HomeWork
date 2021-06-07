@@ -1,0 +1,6 @@
+D:\work\net\web\WebApi\WebApi_DBUtility\obj\Debug\DBUtility.csproj.CoreCompileInputs.cache
+D:\work\net\web\WebApi\WebApi_DBUtility\bin\Debug\WebApi_DBUtility.dll
+D:\work\net\web\WebApi\WebApi_DBUtility\bin\Debug\WebApi_DBUtility.pdb
+D:\work\net\web\WebApi\WebApi_DBUtility\obj\Debug\WebApi_DBUtility.dll
+D:\work\net\web\WebApi\WebApi_DBUtility\obj\Debug\WebApi_DBUtility.pdb
+D:\work\net\web\WebApi\WebApi_DBUtility\obj\Debug\DBUtility.csprojAssemblyReference.cache

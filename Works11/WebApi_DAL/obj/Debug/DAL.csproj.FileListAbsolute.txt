@@ -1,0 +1,11 @@
+D:\work\net\web\WebApi\WebApi_DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+D:\work\net\web\WebApi\WebApi_DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\work\net\web\WebApi\WebApi_DAL\bin\Debug\WebApi_DAL.dll
+D:\work\net\web\WebApi\WebApi_DAL\bin\Debug\WebApi_DAL.pdb
+D:\work\net\web\WebApi\WebApi_DAL\bin\Debug\WebApi_DBUtility.dll
+D:\work\net\web\WebApi\WebApi_DAL\bin\Debug\WebApi_Model.dll
+D:\work\net\web\WebApi\WebApi_DAL\bin\Debug\WebApi_DBUtility.pdb
+D:\work\net\web\WebApi\WebApi_DAL\bin\Debug\WebApi_Model.pdb
+D:\work\net\web\WebApi\WebApi_DAL\obj\Debug\DAL.csproj.CopyComplete
+D:\work\net\web\WebApi\WebApi_DAL\obj\Debug\WebApi_DAL.dll
+D:\work\net\web\WebApi\WebApi_DAL\obj\Debug\WebApi_DAL.pdb
